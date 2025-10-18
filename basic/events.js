@@ -26,3 +26,16 @@ This module, in particular, offers the EventEmitter class, which we'll use to ha
 
 The use of this pattern is to decouple your code—it allows different parts of your application to communicate without being tightly linked.
 */
+
+
+//added comment
+
+const EventEmitter = require('events');
+const eventEmitter = new EventEmitter();
+console.log('eventEmitter', eventEmitter);
+eventEmitter.on('event', () => {
+    console.log('an event occurred!');
+});
+eventEmitter.emit('event');
+
+module.exports = eventEmitter; 
